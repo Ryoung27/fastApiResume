@@ -1,1 +1,4 @@
-#requriements file for personal info service.
+fastapi
+uvicorn
+pymongo
+pydantic

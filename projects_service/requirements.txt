@@ -1,1 +1,4 @@
-#requriements file for projects service.
+fastapi
+uvicorn
+pymongo
+pydantic

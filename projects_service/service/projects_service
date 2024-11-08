@@ -1,0 +1,21 @@
+# projects_service/service/projects_service.py
+
+import os
+from pymongo import MongoClient
+from .models import ProjectItem
+
+# MongoDB connection
+client = MongoClient(os.getenv("MONGO_URI"))
+db = client["resume_db"]
+projects_collection = db["projects"]
+
+# Fetch all projects
+def get_projects_data():
+    projects = projects_collection.find()
+    return [ProjectItem(
+        title=project["title"],
+        description=project["description"],
+        technologies=project["technologies"],
+        link=project["link"],
+        duration=project["duration"]
+    ).dict() for project in projects]

@@ -1,1 +1,4 @@
-#requriements file for experience service.
+fastapi
+uvicorn
+pymongo
+pydantic
