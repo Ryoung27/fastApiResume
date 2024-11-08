@@ -1,0 +1,1 @@
+#model file for skills service.
